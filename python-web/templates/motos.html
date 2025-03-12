@@ -1,0 +1,67 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="container mt-4">
+    <h2 class="mb-3">Últimas motos agregadas</h2>
+
+    <!-- Filtros -->
+    <div class="d-flex gap-2 mb-3">
+        <select class="form-select" aria-label="Seleccionar marca">
+            <option selected>Marca</option>
+            <option value="Honda">Honda</option>
+            <option value="Kawasaki">Kawasaki</option>
+            <option value="KTM">KTM</option>
+        </select>
+        <select class="form-select" aria-label="Seleccionar precio">
+            <option selected>Precio</option>
+            <option value="1">Menor a mayor</option>
+            <option value="2">Mayor a menor</option>
+        </select>
+        <button class="btn btn-dark">Aplicar filtros</button>
+    </div>
+
+    <div class="row">
+        <!-- Moto 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card p-3 shadow-sm">
+                <img src="/static/Imagenes/honda.jpeg" class="card-img-top" alt="Honda CBR1000RR">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Honda CBR1000RR</h5>
+                    <p class="card-text text-primary fw-bold">$60.000.000</p>
+                    <p class="card-text">2016 | 50.486 Km</p>
+                    <p class="card-text">Suba - Bogotá D.C.</p>
+                    <a href="#" class="btn btn-dark">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Moto 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card p-3 shadow-sm">
+                <img src="/static/Imagenes/kawasaki.jpeg" class="card-img-top" alt="Kawasaki Er6n 650cc">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Kawasaki Er6n 650cc</h5>
+                    <p class="card-text text-primary fw-bold">$32.900.000</p>
+                    <p class="card-text">2019 | 5.300 Km</p>
+                    <p class="card-text">Usaquén - Bogotá D.C.</p>
+                    <a href="#" class="btn btn-dark">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Moto 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card p-3 shadow-sm">
+                <img src="/static/Imagenes/duke.jpeg" class="card-img-top" alt="KTM 390 Adventure">
+                <div class="card-body text-center">
+                    <h5 class="card-title">KTM 390 Adventure</h5>
+                    <p class="card-text text-primary fw-bold">$25.500.000</p>
+                    <p class="card-text">2021 | 18.700 Km</p>
+                    <p class="card-text">Usaquén - Bogotá D.C.</p>
+                    <a href="#" class="btn btn-dark">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container mt-4">
+    <h2 class="mb-3">Contacto</h2>
+    <p>Ponte en contacto con nosotros enviando un correo electrónico a <strong>info@tucarroymoto.com</strong> o utilizando el formulario de contacto a continuación.</p>
+    <p>También puedes encontrarnos en nuestras redes sociales para conocer nuestras últimas ofertas y novedades.</p>
+
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-6">
+            <label for="nombre" class="form-label">Tu nombre (requerido)</label>
+            <input type="text" class="form-control" id="nombre" required>
+            <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">Tu correo electrónico (requerido)</label>
+            <input type="email" class="form-control" id="email" required>
+            <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+        </div>
+        <div class="col-12">
+            <label for="asunto" class="form-label">Asunto</label>
+            <input type="text" class="form-control" id="asunto">
+        </div>
+        <div class="col-12">
+            <label for="mensaje" class="form-label">Tu mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+            <div class="invalid-feedback">Por favor, ingresa tu mensaje.</div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

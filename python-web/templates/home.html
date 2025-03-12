@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% block content %}
+
+<h1>Últimos vehículos agregados</h1>
+
+<div class="filtros">
+    <select id="filtro-marca">
+        <option value="">Marca</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Yamaha">Yamaha</option>
+    </select>
+
+    <select id="filtro-precio">
+        <option value="">Precio</option>
+        <option value="90000000">Menos de $90.000.000</option>
+        <option value="10000000-50000000">$10.000.000 - $50.000.000</option>
+    </select>
+
+    <button id="aplicar-filtros">Aplicar filtros</button>
+</div>
+
+
+<div class="catalogo">
+    <div class="vehiculo">
+        <img src="{{ url_for('static', filename='imagenes/carro1.jpg') }}" alt="Carro 1">
+        <h3>Toyota Corolla 2022</h3>
+        <p>$90.000.000</p>
+        <button>Ver detalles</button>
+    </div>
+
+    <div class="vehiculo">
+        <img src="{{ url_for('static', filename='imagenes/moto1.jpeg') }}" alt="Moto 1">
+        <h3>Yamaha MT 09 2025</h3>
+        <p>$48.000.000</p>
+        <button>Ver detalles</button>
+    </div>
+
+</div>
+
+
+<div id="modal-detalles" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-precio"></p>
+        <p id="modal-descripcion"></p>
+
+    </div>
+
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+{% endblock %}

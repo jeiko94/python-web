@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+
+    <h2 class="mb-3">Carros Usados</h2>
+
+    <!-- Filtros -->
+
+    <div class="d-flex gap-2 mb-3">
+        <select id="filtro-marca" class="form-select" aria-label="Seleccionar marca">
+            <option selected value="">Marca</option>
+            <option value="Suzuki">Suzuki</option>
+            <option value="Audi">Audi</option>
+            <option value="Ford">Ford</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Volkswagen">Volkswagen</option>
+        </select>
+
+        <select id="filtro-precio" class="form-select" aria-label="Seleccionar precio">
+            <option selected value="">Precio</option>
+            <option value="asc">Menor a mayor</option>
+            <option value="desc">Mayor a menor</option>
+        </select>
+
+        <button id="aplicar-filtros" class="btn btn-dark">Aplicar filtros</button>
+    
+    </div>
+
+    <div class="row">
+
+        <!-- Vehículo 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card p-3 shadow-sm">
+                <img src="/static/Imagenes/suzuki_scross.jpg" class="card-img-top" alt="Suzuki New S-cross 1.4 Glx">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Suzuki New S-cross 1.4 Glx</h5>
+                    <p class="card-text text-primary fw-bold">$93.000.000</p>
+                    <a href="#" class="btn btn-dark">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Vehículo 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card p-3 shadow-sm">
+                <img src="/static/Imagenes/audi_q3.jpg" class="card-img-top" alt="Audi Q3 1.4 Sportback">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Audi Q3 1.4 Sportback</h5>
+                    <p class="card-text text-primary fw-bold">$167.000.000</p>
+                    <a href="#" class="btn btn-dark">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Vehículo 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card p-3 shadow-sm">
+                <img src="/static/Imagenes/ford_fiesta.jpg" class="card-img-top" alt="Ford Fiesta 1.6 Se Mt">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ford Fiesta 1.6 Se Mt</h5>
+                    <p class="card-text text-primary fw-bold">$28.000.000</p>
+                    <a href="#" class="btn btn-dark">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Vehículo 4 -->
+        <div class="col-md-4 mb-4">
+            <div class="card p-3 shadow-sm">
+                <img src="/static/Imagenes/toyota_corolla.jpg" class="card-img-top" alt="Toyota Corolla 1.8 Gli At">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Toyota Corolla 1.8 Gli At</h5>
+                    <p class="card-text text-primary fw-bold">$34.500.000</p>
+                    <a href="#" class="btn btn-dark">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Vehículo 5 -->
+        <div class="col-md-4 mb-4">
+            <div class="card p-3 shadow-sm">
+                <img src="/static/Imagenes/volkswagen_tcross.jpg" class="card-img-top" alt="Volkswagen T-cross 1.6 Comfortline Plus At">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Volkswagen T-cross 1.6 Comfortline Plus At</h5>
+                    <p class="card-text text-primary fw-bold">$79.000.000</p>
+                    <a href="#" class="btn btn-dark">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
